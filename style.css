@@ -4,7 +4,170 @@ body {
     padding: 0;
     background-color: #0c0c0c;
     color: #fff;
+    position: relative;
+    width: 100%;
 }
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('./bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 70px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 100;
+}
+
+nav .nav-bar {
+    position: relative;
+    height: 100%;
+    max-width: 1000px;
+    width: 100%;
+    background-color: #00000000;
+    margin: 0 auto;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .nav-bar .sidebarOpen {
+    color: white;
+    font-size: 25px;
+    padding: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+nav .nav-bar .logo a {
+    font-size: 25px;
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
+}
+
+.menu .logo-toggle {
+    display: none;
+}
+
+.nav-bar .nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-bar .nav-links li {
+    margin: 0 5px;
+    list-style: none;
+}
+
+.nav-links li a {
+    position: relative;
+    font-size: 17px;
+    font-weight: 400;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.nav-links li a::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 2px;
+    width: 80%;
+    background-color: #f7a41d;
+    color: #f7a41d;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.nav-links li:hover a::before {
+    opacity: 1;
+    color: #f7a41d;
+
+}
+
+.nav-links li a:hover {
+    color: #f7a41d;
+}
+
+@media (max-width: 790px) {
+    nav .nav-bar .sidebarOpen {
+        display: block;
+    }
+
+    nav .nav-bar .logo a {
+        font-size: 25px;
+        font-weight: 500;
+        color: white;
+        text-decoration: none;
+    }
+
+    .menu {
+        position: fixed;
+        height: 100%;
+        width: 320px;
+        left: -100%;
+        top: 0;
+        padding: 20px;
+        background-color: black;
+        z-index: 100;
+        transition: all 0.4s ease;
+    }
+
+    nav.active .menu {
+        left: -0%;
+    }
+
+    nav.active .nav-bar .navLogo a {
+        opacity: 0;
+        transition: all 0.3s ease;
+    }
+
+    .menu .logo-toggle {
+        display: block;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo-toggle .siderbarClose {
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .nav-bar .nav-links {
+        flex-direction: column;
+        padding-top: 30px;
+    }
+
+    .nav-links li a {
+        display: block;
+        margin-top: 20px;
+    }
+}
+
+
+
 
 .hero {
     position: relative;
@@ -15,9 +178,8 @@ body {
     max-width: 100%;
     overflow: hidden;
     margin: auto;
-    padding-bottom: 0px;
-    background: linear-gradient(-45deg, rgba(0, 0, 0, 0.356), rgba(0, 0, 0, 0.527)),
-     url('./bg.jpg') no-repeat center center/cover;
+    padding-bottom: 0%;
+    background: linear-gradient(-45deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
 }
 
 .hero::before {
@@ -27,11 +189,11 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(-45deg, #f7a31d, black, #1a1a1a, black, #f7a31d);
+    background: linear-gradient(-45deg, #f7a41d, #1a1a1a, black, #f7a41d);
     background-size: 400% 400%;
     animation: backgroundAnimation 10s ease infinite;
     z-index: 1;
-    opacity: 0.5;
+    opacity: 0.3;
 }
 
 @keyframes backgroundAnimation {
@@ -79,7 +241,7 @@ body {
 }
 
 .hero h1 span {
-    color: #f7a31d;
+    color: #f7a41d;
 }
 
 .hero h2 {
@@ -89,7 +251,7 @@ body {
 }
 
 .hero h2 span {
-    color: #f7a31d;
+    color: #f7a41d;
     font-weight: bold;
 }
 
@@ -101,7 +263,7 @@ body {
 
 .hero .buttons {
     margin: 20px 0;
-    margin-top: 6%;
+    margin-top: 5%;
 }
 
 .hero .cv-btn {
@@ -144,7 +306,7 @@ body {
 
 .hero .social-icons a:hover {
     transform: scale(1.2);
-    color: #f7a31d;
+    color: #f7a41d;
 }
 
 .hero img {
@@ -181,6 +343,10 @@ body {
 
     .hero .content {
         max-width: 100%;
+    }
+
+    .social-icons a {
+        margin-bottom: 5%;
     }
 
     .hero img {
@@ -347,6 +513,7 @@ body {
 .content {
     max-width: 600px;
     margin-left: 50px;
+    margin-top: 8%;
 }
 
 .content h2 {
@@ -361,7 +528,7 @@ body {
 }
 
 .buttons {
-    margin-top: 30px;
+    margin-top: 60px;
 }
 
 .buttons button {
@@ -414,30 +581,17 @@ body {
     margin-top: 3%;
     padding: 50px 20px;
     text-align: center;
-    background: url('./bg.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
     position: relative;
-    z-index: 1;
+    padding-top: 0%;
 }
 
-.container::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.534);
-    z-index: -1;
-}
 
 .education-container {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
-    padding-top: 2%;
+    padding-top: 6%;
     margin: auto;
 }
 
@@ -508,14 +662,17 @@ body {
     left: calc(100% + 20px);
     transform: translateY(-50%);
     font-size: 1.2em;
-    background: #f7a41d;
-    padding: 5px 10px;
+    border: 1px solid #f7a41d;
+    background: #000000;
+    padding: 10px 20px;
     border-radius: 5px;
     transition: background 0.3s ease-in-out;
 }
 
 .year:hover {
-    box-shadow: 0 0 15px #ffffff;
+    background-color: #f7a41d;
+    color: #000;
+    box-shadow: 6px 6px 6px #332f2f;
 
 
 }
@@ -579,7 +736,7 @@ body {
     min-width: 250px;
     max-width: 300px;
     border-radius: 15px;
-    border: 1px solid #f7a31d;
+    border: 1px solid #f7a41d;
     overflow: hidden;
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
@@ -665,21 +822,6 @@ body {
     overflow: hidden;
     width: 90%;
     position: relative;
-    background: url('./bg.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: 1;
-}
-
-.container1::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.575);
-    z-index: -1;
 }
 
 
@@ -732,6 +874,7 @@ body {
     padding: 40px;
     background-color: rgba(0, 0, 0, 0.4);
     border: 1px solid #f7a41d;
+
 }
 
 
@@ -792,6 +935,7 @@ body {
 
     .right-box {
         padding: 20px;
+        margin-top: 5%;
     }
 
     .left-box::before {
