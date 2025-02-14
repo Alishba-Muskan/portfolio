@@ -1,3 +1,29 @@
+html{
+    scroll-behavior: smooth;
+}
+
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #000000;
+    border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #f7a41d;
+    border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #d98c0d;
+}
+
+
+
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -6,6 +32,7 @@ body {
     color: #fff;
     position: relative;
     width: 100%;
+    overflow: hidden;
 }
 
 body::before {
@@ -23,11 +50,19 @@ body::before {
 
 
 
+
+
+
+
+
+
+
+
 nav {
     position: fixed;
     top: 0;
     left: 0;
-    height: 70px;
+    height: 60px;
     width: 100%;
     background-color: rgba(0, 0, 0, 0);
     z-index: 100;
@@ -77,11 +112,11 @@ nav .nav-bar .logo a {
 
 .nav-links li a {
     position: relative;
-    font-size: 17px;
+    font-size: 18px;
     font-weight: 400;
     color: white;
     text-decoration: none;
-    padding: 10px;
+    padding: 20px;
 }
 
 .nav-links li a::before {
@@ -179,7 +214,6 @@ nav .nav-bar .logo a {
     overflow: hidden;
     margin: auto;
     padding-bottom: 0%;
-    background: linear-gradient(-45deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
 }
 
 .hero::before {
@@ -189,11 +223,11 @@ nav .nav-bar .logo a {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(-45deg, #f7a41d, #1a1a1a, black, #f7a41d);
+    background: linear-gradient(-45deg, #f7a41d, black, #000000, black, black, #f7a41d);
     background-size: 400% 400%;
     animation: backgroundAnimation 10s ease infinite;
     z-index: 1;
-    opacity: 0.3;
+    opacity: 0.5;
 }
 
 @keyframes backgroundAnimation {
@@ -213,22 +247,8 @@ nav .nav-bar .logo a {
 .hero .content {
     max-width: 50%;
     text-align: center;
-    animation: fadeIn 2s ease-in;
     position: relative;
     z-index: 2;
-    /* Ensure text is above overlay */
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 .hero h1 {
@@ -237,7 +257,6 @@ nav .nav-bar .logo a {
     text-transform: uppercase;
     letter-spacing: 2px;
     color: white;
-    /* Ensure text is readable */
 }
 
 .hero h1 span {
@@ -313,27 +332,11 @@ nav .nav-bar .logo a {
     width: 35%;
     border-radius: 15px;
     transition: 0.3s;
-    animation: bounceIn 1.9s ease-in-out;
     position: relative;
     z-index: 2;
 }
 
-@keyframes bounceIn {
-    0% {
-        transform: scale(0.5);
-        opacity: 0;
-    }
 
-    50% {
-        transform: scale(1.1);
-        opacity: 0.7;
-    }
-
-    100% {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
 
 @media (max-width: 768px) {
     .hero {
@@ -528,7 +531,7 @@ nav .nav-bar .logo a {
 }
 
 .buttons {
-    margin-top: 60px;
+    margin-top: 2%;
 }
 
 .buttons button {
