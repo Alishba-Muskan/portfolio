@@ -28,4 +28,43 @@ style.innerHTML = `
 `;
 document.head.appendChild(style);
 
+document.addEventListener("DOMContentLoaded", function () {
+    const navLinks = document.querySelectorAll(".nav-links a");
+
+    function setActiveLink() {
+        let scrollPosition = window.scrollY;
+
+        navLinks.forEach(link => {
+            const section = document.querySelector(link.getAttribute("href"));
+            if (
+                section.offsetTop - 80 <= scrollPosition &&
+                section.offsetTop + section.offsetHeight - 80 > scrollPosition
+            ) {
+                navLinks.forEach(nav => nav.classList.remove("active"));
+                link.classList.add("active");
+            }
+        });
+    }
+
+    navLinks.forEach(link => {
+        link.addEventListener("click", function () {
+            navLinks.forEach(nav => nav.classList.remove("active"));
+            this.classList.add("active");
+        });
+    });
+
+    window.addEventListener("scroll", setActiveLink);
+});
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    setTimeout(() => {
+        document.querySelector(".preloader").classList.add("hide");
+    }, 4000);
+});
+
 
