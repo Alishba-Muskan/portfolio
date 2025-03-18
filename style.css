@@ -132,8 +132,10 @@ nav {
 
 
 .logo{
-    height: 70px;
-    width: 160px;
+    margin-top: 1%;
+    margin-left: 5%;
+    height: 80px;
+    width: 120px;
 }
 nav .nav-bar {
     position: relative;
@@ -172,11 +174,13 @@ nav .nav-bar .logo a {
 .nav-bar .nav-links {
     display: flex;
     align-items: center;
+    margin-top: 4%;
 }
 
 .nav-bar .nav-links li {
-    margin: 0 5px;
+    margin: 0px 5px;
     list-style: none;
+    
 }
 
 .nav-links li a {
@@ -185,7 +189,7 @@ nav .nav-bar .logo a {
     font-weight: 400;
     color: white;
     text-decoration: none;
-    padding: 10px;
+    padding: 20px 28px;
 }
 
 .nav-links li a::before {
@@ -648,10 +652,10 @@ nav .nav-bar .logo a {
     max-width: 1500px;
     margin: auto;
     margin-top: 3%;
-    padding: 50px 20px;
+    padding: -10px 20px;
     text-align: center;
     position: relative;
-    padding-top: 0%;
+    padding-top: -10%;
 }
 
 
@@ -659,7 +663,7 @@ nav .nav-bar .logo a {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 72vh;
     padding-top: 6%;
     margin: auto;
 }
