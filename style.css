@@ -402,7 +402,7 @@ nav .nav-bar .logo a {
 }
 
 .hero img {
-    width: 35%;
+    width: 40%;
     border-radius: 15px;
     transition: 0.3s;
     position: relative;
@@ -452,7 +452,7 @@ nav .nav-bar .logo a {
 .skills-section {
     max-width: 700px;
     margin: auto;
-    margin-top: 6%;
+    margin-top: 20%;
     text-align: center;
 }
 
@@ -463,7 +463,7 @@ nav .nav-bar .logo a {
     font-size: 36px;
     font-weight: bold;
     text-align: center;
-    margin-bottom: 28%;
+    margin-bottom: 30%;
     position: relative;
     transition: 0.3s;
 }
@@ -570,6 +570,7 @@ nav .nav-bar .logo a {
     width: 350px;
     height: 400px;
     background: #fff;
+    border: 1px solid #f7a41d;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -609,7 +610,8 @@ nav .nav-bar .logo a {
 
 .buttons button {
     background: transparent;
-    color: #f7a41d;
+    text-decoration: none;
+    color: #ffffff;
     padding: 15px 30px;
     border: 2px solid #f7a41d;
     cursor: pointer;
@@ -620,9 +622,15 @@ nav .nav-bar .logo a {
     transition: 0.3s;
 }
 
+.buttons button a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+
 .buttons button:hover {
     background: #f7a41d;
-    color: #000;
+    color: #ffffff;
 }
 
 @media (max-width: 1024px) {
@@ -652,10 +660,9 @@ nav .nav-bar .logo a {
     max-width: 1500px;
     margin: auto;
     margin-top: 3%;
-    padding: -10px 20px;
+    padding: -10px 80px;
     text-align: center;
     position: relative;
-    padding-top: -10%;
 }
 
 
@@ -665,6 +672,7 @@ nav .nav-bar .logo a {
     justify-content: center;
     height: 72vh;
     padding-top: 6%;
+    margin-top: 80%;
     margin: auto;
 }
 

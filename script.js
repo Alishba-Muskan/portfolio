@@ -1,3 +1,5 @@
+
+
 document.addEventListener('DOMContentLoaded', () => {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -7,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 entry.target.classList.remove('visible');
             }
         });
-    }, { threshold: 0.5 });
+    }, { threshold: 0.3 });
 
     document.querySelectorAll('.project-card, .skills-title, .timeline-item, .skills-grid, .skill, .container, .about, .img-wrapper, .content p, .content button, .container1, .right-box, .left-box .info, .left-box p, .footer, .footer-container, .footer-content a, .hero, .content h1, .content h2, .content p, .social-icons a, hero img ').forEach(element => {
         observer.observe(element);
@@ -64,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function() {
     setTimeout(() => {
         document.querySelector(".preloader").classList.add("hide");
-    }, 4000);
+    }, 1000);
 });
 
 
